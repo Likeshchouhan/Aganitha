@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Likesh/Downloads/tinylink/app/layout.jsx"],"sourcesContent":["export default function RootLayout({ children }) {\r\nreturn (\r\n<html lang=\"en\">\r\n<body className=\"bg-gray-100 text-gray-900\">\r\n<div className=\"max-w-3xl mx-auto p-6\">{children}</div>\r\n</body>\r\n</html>\r\n);\r\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC/C,qBACA,8OAAC;QAAK,MAAK;kBACX,cAAA,8OAAC;YAAK,WAAU;sBAChB,cAAA,8OAAC;gBAAI,WAAU;0BAAyB;;;;;;;;;;;;;;;;AAIxC"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Likesh/Downloads/tinylink/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-rsc']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
+}

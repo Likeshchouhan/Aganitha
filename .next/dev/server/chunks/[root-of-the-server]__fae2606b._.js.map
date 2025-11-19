@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Likesh/Downloads/tinylink/app/%5Bcode%5D/route.js"],"sourcesContent":["// Redirect route placeholder\nimport { NextResponse } from \"next/server\";\nimport { connectDB } from \"@/lib/db\";\nimport Link from \"@/models/Link\";\n\nexport async function GET(_, { params }) {\n  await connectDB();\n\n  const link = await Link.findOne({ code: params.code });\n\n  if (!link) return NextResponse.json({ error: \"Not found\" }, { status: 404 });\n\n  // update click count\n  link.clicks += 1;\n  link.lastClicked = new Date();\n  await link.save();\n\n  return NextResponse.redirect(link.url); // 302\n}\n"],"names":[],"mappings":"AAAA,6BAA6B;;;;;AAC7B;;;;;;;;;;;;;;AAIO,eAAe,IAAI,CAAC,EAAE,EAAE,MAAM,EAAE;IACrC,MAAM;IAEN,MAAM,OAAO,MAAM,KAAK,OAAO,CAAC;QAAE,MAAM,OAAO,IAAI;IAAC;IAEpD,IAAI,CAAC,MAAM,OAAO,gJAAY,CAAC,IAAI,CAAC;QAAE,OAAO;IAAY,GAAG;QAAE,QAAQ;IAAI;IAE1E,qBAAqB;IACrB,KAAK,MAAM,IAAI;IACf,KAAK,WAAW,GAAG,IAAI;IACvB,MAAM,KAAK,IAAI;IAEf,OAAO,gJAAY,CAAC,QAAQ,CAAC,KAAK,GAAG,GAAG,MAAM;AAChD"}}]
+}
